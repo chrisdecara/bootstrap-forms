@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Stephen King Quiz</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <h1 class="pt-5">Stephen King Quiz</h1>
+                    <p class="pt-3">The information for the following quiz on Stephen King was gathered <a href="https://en.wikipedia.org/wiki/Stephen_King">here</a>. Enjoy yourself as you delve into the Master of Horror himself!</p>
+                    <form id="myForm" action="form_processor.js" method="post">
+                        <div class="pt-3"><label class="form-label">What is Stephen King's middle name? </label><input type="text" name="middlename" id="midname" class="form-control"></div>
+                        <div class="pt-3"><label class="form-label">Name Stephen King's first published novel. </label><input type="text" name="novelname" id="novname" class="form-control"></div>
+                        <div class="pt-3"><label class="form-label">Why did Stephen King use the pen name Richard Bachman? What was he trying to do? </label><textarea name="pseudonym_reason" id="pseudoreason" rows="6" class="form-control"></textarea></div>
+                        <p class="pt-3">Which of the following is not a novel by Stephen King?</p>
+                        <div class="form-check">
+                            <label><input type="radio" name="novellist" value="salemslot" class="form-check-input"> 'Salem's Lot</label>
+                        </div>  
+                        <div class="form-check">
+                            <label><input type="radio" name="novellist" value="carrie" class="form-check-input"> Carrie</label>
+                        </div>    
+                        <div class="form-check">
+                            <label><input type="radio" name="novellist" value="thetommyknockers" class="form-check-input"> The Tommyknockers</label>
+                        </div>
+                        <div class="form-check">   
+                            <label><input type="radio" name="novellist" value="wolfbynight" class="form-check-input"> Wolf by Night</label>
+                        </div>
+                        <p class="pt-3">Select the Stephen King movies made before 2000. </p>
+                        <div class="form-check">
+                            <label class="form-check-label"><input type="checkbox" name="movielist" value="thinner" class="form-check-input"> Thinner</label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label"><input type="checkbox" name="movielist" value="thelangoliers" class="form-check-input"> The Langoliers</label>
+                        </div>
+                         <div class="form-check"> 
+                            <label class="form-check-label"><input type="checkbox" name="movielist" value="desperation" class="form-check-input"> Desperation</label>
+                        </div>
+                        <div class="form-check">   
+                            <label class="form-check-label"><input type="checkbox" name="movielist" value="thedeadzone" class="form-check-input"> The Dead Zone</label>
+                        </div>
+                        <div class="pt-3"> Which of these novels was published earliest? 
+                        <select name="earliest_novel" id="earlynovel" class="form-control">
+                            <option value="Joyland">Joyland</option>
+                            <option value="Thinner">Thinner</option>
+                            <option value="DumaKey">Duma Key</option>
+                            <option value="TheShining">The Shining</option>
+                            <option value="CycleOfTheWerewolf">Cycle of the Werewolf</option>
+                            <option value="TheLongWalk">The Long Walk</option>
+                            </select>
+                        </div>
+                        <div class="pt-3 pb-5"><input type="submit" value="Submit" class="btn btn-success text-light"> <input type="reset" value="Reset" class="btn btn-danger text-light"></div>
+                    </form>
+                <div id="showAnswers"></div>
+                    </div>
+                </div>
+            </div>
+            <script src="form_processor.js"></script>
+    </body>
+</html>
